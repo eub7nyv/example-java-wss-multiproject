@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                      https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <parent>
+        <groupId>com.jbariel.example.wss</groupId>
+        <artifactId>example-java-wss-multiproject</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.jbariel.example.wss.consumer</groupId>
+    <artifactId>example-java-wss-multiproject-consumer</artifactId>
+    <version>1.0.0</version>
+
+    <properties>
+        <proj.mainClass>com.jbariel.example.wss.consumer.Consumer</proj.mainClass>
+    </properties>
+
+</project>
+

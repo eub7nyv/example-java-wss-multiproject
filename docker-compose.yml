@@ -1,0 +1,22 @@
+version: "3.1"
+
+services:
+  wss:
+    build: './publisher'
+    ports:
+      - 9001:9001
+    networks:
+      - wss
+    environment:
+      WSS_SERVER: 9001
+  client:
+    build: './consumer'
+    networks:
+      - wss
+    environment:
+      WSS_SERVER_HOST: wss
+      WSS_SERVER_PORT: 9001
+
+networks:
+  wss:
+    driver: bridge
