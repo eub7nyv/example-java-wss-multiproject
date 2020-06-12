@@ -12,7 +12,9 @@ The `docker-compose.yml` will startup an instance each of the client and a serve
 
 ### Build
 _from the root dir_
+
 `mvn` => will build both projects
+
 `docker-compose build` => will build all images
 
 ### Run
