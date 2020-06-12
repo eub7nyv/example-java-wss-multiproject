@@ -3,19 +3,24 @@ version: "3.1"
 services:
   wss:
     build: './publisher'
+    stdin_open: true
+    tty: true
     ports:
       - 9001:9001
     networks:
       - wss
     environment:
-      WSS_SERVER: 9001
+      WSS_PORT: 9000
   client:
     build: './consumer'
+    stdin_open: true
+    tty: true
     networks:
       - wss
     environment:
-      WSS_SERVER_HOST: wss
-      WSS_SERVER_PORT: 9001
+      WSS_HOST: wss
+      WSS_PORT: 9000
+      INIT_DELAY: 3 # how long to wait for the server to start running
 
 networks:
   wss:
